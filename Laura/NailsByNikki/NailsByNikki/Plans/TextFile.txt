@@ -1,0 +1,88 @@
+﻿This would normally be part of a devops system
+
+DATABASE 
+==========
+
+AvailableSlot
+- AvailableSlotID
+- StartDateTime
+- EndDateTime
+
+Booking
+- BookingID
+- AvailabilitySlotID
+- CustomerID
+- IsConfirmed
+- CancellationDate
+- CancellationCharge
+
+Customer
+- CustomerID
+- FirstName
+- Surname
+- DateOfBirth
+- Email
+- PhoneNumber
+- Allergies
+- Medication
+- AdditionalInformation
+- PrivateNotes
+
+BookingHistory
+- BookingHistoryID
+- CustomerID
+- StartDateTime
+- EndDateTime
+- WhatTheCustomerHadDone???
+
+API
+====
+// CRUD for all tables 
+// Get all customers
+// Get all available slots between 2 dates
+// Get all bookings (and booking history) for a customer
+// Get all bookings between 2 dates 
+// Delete all empty availability slots prior to current date
+// Cancel a booking
+// Mark booking as attended (move to booking history)
+
+Creating views in db (Out of scope)
+Get todays bookings (Out of scope)
+Get customers with cancellation charge to pay (Out of scope)
+!! Populate availability slots !! (Out of scope)
+Write calls to postman (Out of scope)
+
+Thoughts / Assumptions
+====================
+
+All appointments will be the same length (this should be the maximum time Nikki could 
+spend on an appointment) (in the future if a short appointment was booked a new 
+availability slot could be made automatically for the rest of the slot offering only 
+services that can be completed in that time)
+
+The application would need to manage a way of populating availability slots easily so it
+doesn't become tedious (Between 2 dates, select a days of week, select times, make all 
+that match available?)
+
+The application would need a way to delete any empty availability slots after the date 
+has passed to prevent the database filling up unnecessarily
+
+When a booking has been marked as "attended" via the application its details are moved 
+to booking history and removed from booking and availability to ensure the main system 
+stays fast in priority areas
+
+
+BRIEF 
+
+(for 3 and 4 just start with a handful to get you started because want web api done)
+
+// 1. EF Core to created the models/database
+
+// 2.1 Services to access the database - CRUD Methods
+2.2 Services to access the database - extra ones
+
+3. Unit test the service with mocked database
+
+4. Integration test (not mocked database)
+
+// 5. Web Api to expose our service

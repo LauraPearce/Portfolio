@@ -1,0 +1,10 @@
+﻿Exercise 2
+----------
+
+I am developer working on a number of applications for a school that I am thinking about reusing and taking to other schools.
+
+I want a library that I can use to manage the student and teaching groups.
+
+Students must have a name and be able to set a latest test score. Test scores should be between 1-100.
+
+Teaching groups should have students. I should be able to get the student with the highest score and lowest scores and the average score for the group.

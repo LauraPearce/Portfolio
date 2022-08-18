@@ -1,0 +1,91 @@
+﻿Poker OOP Design
+=================
+
+- Stage (enum) {Hole, Flop, Turn, River}
+
+- Hand (enum) {high card - royal flush}
+
+- Value (enum) {ace - king}
+
+- Suit (enum) {hearts, spades, diamonds, clubs}
+
+- Card
+    + ** value
+    + ** suit
+    + intValue
+    + image
+    + toString (override)
+
+- Deck
+    + ** list<Card>
+    + includeJokers
+    + aceHigh
+    + aceLow
+
+    + reset()
+    + draw()
+    + shuffle()
+    + count()
+
+- PokerPlayer (abstract)
+    + game
+    + name
+    + position
+    + isInPlay // folded / run out of money
+    + balance
+    + ** holeCards (list<Card>)
+
+    + joinGame(PokerGame) // add game reference and to game list of players
+    + getHandValue(list<Card>)
+    + allIn()
+    + raise()
+    + call()
+    + fold()
+    + isBalanceSufficient(minmumBet)
+    + takeTurn() (abstract/virtual)
+
+- HumanPokerPlayer: PokerPlayer
+    + takeTurn() (override)
+
+- AiPokerPlayer: PokerPlayer    
+    = ctor selected difficulty 
+    = ctor random difficulty
+
+    + chanceToBluff / confidence / abilityLevel / difficulty
+
+    + takeTurn() (override)
+
+- PokerGame
+    = ctor handle creation of deck (no jokers, ace high)
+    = ctor handle generation of ai player and call joinGame for each
+    = ctor handle initialisation of other properties (small blind, big blind, log etc)
+
+    + numberOfHandsPlayed
+    + smallBlind
+    + bigBlind 
+    + minimumBet // records the increasing value throughout the hand and resets to the big blind
+    + ** stage/status
+    + log (list<string>) // used to display messages for whats happening in the game to the user
+    + pot
+    + ** deck
+    + ** communityCards (list<Card>) // 3-5 cards that are on the table
+    + ** players (list<players>)
+    + turnPosition
+    + isPlayerTurn
+
+    + saveLog()
+    + shufflePlayers() // shuffle list and assign position
+    + startNewHand() 
+    + takeBlinds()
+    + deal() // deal 2 "hole" cards to each player
+    + flop() // first 3
+    + turn() // 4th
+    + river() // 5th
+    + roundOfBetting() // foreach player do stuff and check if it is the humans players turn
+    + getActivePlayers() // players that have not folded
+    + getWinningPlayers() // players not player due to the possibility of a split pot
+
+
+    
+
+

@@ -1,0 +1,46 @@
+﻿// + balance - poker player
+
+Within PokerGame class
+// + smallBlind // half the big blind
+// + bigBlind  - int value
+// + pot - private set potentially - should not be able to be changed outside of the game.
+// Potentially in EndRound(), empty the pot 
+
+ + takeBlinds()
+
++ Exceptions/validations
+// - for balance being too low to put down a blind put into StartRound()
+// - big blind must be 2 or larger and even
+
+
+
+BRIEF #1
+//  + flop() // first 3
+//  + turn() // 4th
+//  + river() // 5th
+
+BRIEF #2
+// Poker Player
+// + GetHandValue()
+
+// + enum for all the different hands possible
+
+BRIEF #3
+// Poker Player
+//   + raise()
+//   + call()
+//   + fold()
+
+Poker Game
+//   + minimumBet // records the increasing value throughout the hand and resets to the big blind
+
+
+BRIEF #4
+// - Look at exceptions with Steve
+   + getWinningPlayers() // players not player due to the possibility of a split pot
+    
+BRIEF #5 
+- introduce Stage (enums), put it in the game, when you deal - set the stage to hole cards,
+- Stage (enum) {Not in Play, Hole, Flop, Turn, River, Showdown}
+
+

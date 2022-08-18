@@ -1,0 +1,16 @@
+﻿Exercise 1:
+------------
+
+I am a developer creating a game.
+
+I want my game to have birds, fish and mammals.
+
+All of the animals should have names and species and the ability to move. 
+
+The birds will fly or waddle if they cant, The fish which will swim, The mammals will run 
+
+The mammals will have a number of legs and the fish a number of fins.
+
+I should be able to get an output that says "this is <name> the <species> which is a <type>"
+
+If 2 animals have the same name, species and type they are the same
