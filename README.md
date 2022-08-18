@@ -1,5 +1,5 @@
 
-# Laura Jeeves' Coding Portfolio
+# Laura Pearce's Coding Portfolio
 
 ---
 
