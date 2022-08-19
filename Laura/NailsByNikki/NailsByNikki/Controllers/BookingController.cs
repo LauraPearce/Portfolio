@@ -53,11 +53,10 @@ namespace NailsByNikki.Controllers
             };
 
             Customer customer = _customerRepository.GetById(customerId);
+            AvailableSlot availableSlot = _availableSlotRepository.GetById(availabilitySlotId);
 
-            //TODO: finish validation to check if the availableSlotId and customerId are correct (i.e, availableslot is available)
-            if (newBooking.CustomerId >= 0
-                && newBooking.AvailableSlotId >= 0)
-            {
+            if (customer is not null && availableSlot is not null)
+            { 
                 _bookingRepository.Create(newBooking);
                 return CreatedAtAction(nameof(Create), new { id = newBooking.BookingId }, newBooking);
             }
