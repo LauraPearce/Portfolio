@@ -12,7 +12,6 @@ using System.Threading.Tasks;
 
 namespace NailsByNikki.Test
 {
-    //TODO: change empty tests to throw not implemented exceptions and remove commented code
     [TestClass]
     public class CustomerControllerUnitTests
     {
@@ -75,289 +74,97 @@ namespace NailsByNikki.Test
         [TestMethod]
         public void GetById_Success_ReturnsCustomerById()
         {
+            throw new NotImplementedException();
+
             // ARRANGE
 
-            //// create expected return object
-
-            // setup mocked repo
-            //_mockBookingRepository.Setup(repo => repo.GetById(1)).Returns(_expected);
-
-            // initialise controller using mocked repository
-            //BookingController _sut = new BookingController(_mockBookingRepository.Object, _mockBookingHistoryRepository.Object, _mockAvailableSlotRepository.Object);
-
-            // ACT
-
-            //ActionResult? response = _sut.GetById(1).Result;
-
+            // ACT            
 
             // ASSERT
-
-            // check the returned status code from the api
-            //OkObjectResult httpResult = response as OkObjectResult;
-            //Assert.IsNotNull(httpResult);
-            //Assert.AreEqual(StatusCodes.Status200OK, httpResult.StatusCode);
-
-            // check return type            
-            //Booking booking = httpResult.Value as Booking;
-            //Assert.IsNotNull(booking);
-
-            // check the values are returned
-            //Assert.AreEqual(_expected.BookingId, booking.BookingId);
-
-            // check the repository method is called once
-            //_mockBookingRepository.Verify(repo => repo.GetById(1), Times.Once);
         }
 
         [TestMethod]
         public void GetById_Failure_ReturnsNotFound()
         {
+            throw new NotImplementedException();
+
             // ARRANGE
 
-            //// create expected return object
-
-            // setup mocked repo
-            //_mockBookingRepository.Setup(repo => repo.GetById(1)).Returns(_expected);
-
-            // initialise controller using mocked repository
-            //BookingController _sut = new BookingController(_mockBookingRepository.Object, _mockBookingHistoryRepository.Object, _mockAvailableSlotRepository.Object);
-
-            // ACT
-
-            //ActionResult? response = _sut.GetById(1).Result;
-
+            // ACT            
 
             // ASSERT
-
-            // check the returned status code from the api
-            //OkObjectResult httpResult = response as OkObjectResult;
-            //Assert.IsNotNull(httpResult);
-            //Assert.AreEqual(StatusCodes.Status200OK, httpResult.StatusCode);
-
-            // check return type            
-            //Booking booking = httpResult.Value as Booking;
-            //Assert.IsNotNull(booking);
-
-            // check the values are returned
-            //Assert.AreEqual(_expected.BookingId, booking.BookingId);
-
-            // check the repository method is called once
-            //_mockBookingRepository.Verify(repo => repo.GetById(1), Times.Once);
         }
 
         [TestMethod]
         public void Create_Success_ReturnsNewCustomer()
         {
+            throw new NotImplementedException();
+
             // ARRANGE
 
-            //// create expected return object
-
-            // setup mocked repo
-            //_mockBookingRepository.Setup(repo => repo.GetById(1)).Returns(_expected);
-
-            // initialise controller using mocked repository
-            //BookingController _sut = new BookingController(_mockBookingRepository.Object, _mockBookingHistoryRepository.Object, _mockAvailableSlotRepository.Object);
-
-            // ACT
-
-            //ActionResult? response = _sut.GetById(1).Result;
-
+            // ACT            
 
             // ASSERT
-
-            // check the returned status code from the api
-            //OkObjectResult httpResult = response as OkObjectResult;
-            //Assert.IsNotNull(httpResult);
-            //Assert.AreEqual(StatusCodes.Status200OK, httpResult.StatusCode);
-
-            // check return type            
-            //Booking booking = httpResult.Value as Booking;
-            //Assert.IsNotNull(booking);
-
-            // check the values are returned
-            //Assert.AreEqual(_expected.BookingId, booking.BookingId);
-
-            // check the repository method is called once
-            //_mockBookingRepository.Verify(repo => repo.GetById(1), Times.Once);
         }
 
         [TestMethod]
         public void Create_Failure_ReturnsBadRequest()
         {
+            throw new NotImplementedException();
+
             // ARRANGE
 
-            //// create expected return object
-
-            // setup mocked repo
-            //_mockBookingRepository.Setup(repo => repo.GetById(1)).Returns(_expected);
-
-            // initialise controller using mocked repository
-            //BookingController _sut = new BookingController(_mockBookingRepository.Object, _mockBookingHistoryRepository.Object, _mockAvailableSlotRepository.Object);
-
-            // ACT
-
-            //ActionResult? response = _sut.GetById(1).Result;
-
+            // ACT            
 
             // ASSERT
-
-            // check the returned status code from the api
-            //OkObjectResult httpResult = response as OkObjectResult;
-            //Assert.IsNotNull(httpResult);
-            //Assert.AreEqual(StatusCodes.Status200OK, httpResult.StatusCode);
-
-            // check return type            
-            //Booking booking = httpResult.Value as Booking;
-            //Assert.IsNotNull(booking);
-
-            // check the values are returned
-            //Assert.AreEqual(_expected.BookingId, booking.BookingId);
-
-            // check the repository method is called once
-            //_mockBookingRepository.Verify(repo => repo.GetById(1), Times.Once);
         }
 
         [TestMethod]
         public void Update_Success_ReturnsUpdatedCustomer()
         {
+            throw new NotImplementedException();
+
             // ARRANGE
 
-            //// create expected return object
-
-            // setup mocked repo
-            //_mockBookingRepository.Setup(repo => repo.GetById(1)).Returns(_expected);
-
-            // initialise controller using mocked repository
-            //BookingController _sut = new BookingController(_mockBookingRepository.Object, _mockBookingHistoryRepository.Object, _mockAvailableSlotRepository.Object);
-
-            // ACT
-
-            //ActionResult? response = _sut.GetById(1).Result;
-
+            // ACT            
 
             // ASSERT
-
-            // check the returned status code from the api
-            //OkObjectResult httpResult = response as OkObjectResult;
-            //Assert.IsNotNull(httpResult);
-            //Assert.AreEqual(StatusCodes.Status200OK, httpResult.StatusCode);
-
-            // check return type            
-            //Booking booking = httpResult.Value as Booking;
-            //Assert.IsNotNull(booking);
-
-            // check the values are returned
-            //Assert.AreEqual(_expected.BookingId, booking.BookingId);
-
-            // check the repository method is called once
-            //_mockBookingRepository.Verify(repo => repo.GetById(1), Times.Once);
         }
 
         [TestMethod]
         public void Update_Failure_ReturnsNotFound()
         {
+            throw new NotImplementedException();
+
             // ARRANGE
 
-            //// create expected return object
-
-            // setup mocked repo
-            //_mockBookingRepository.Setup(repo => repo.GetById(1)).Returns(_expected);
-
-            // initialise controller using mocked repository
-            //BookingController _sut = new BookingController(_mockBookingRepository.Object, _mockBookingHistoryRepository.Object, _mockAvailableSlotRepository.Object);
-
-            // ACT
-
-            //ActionResult? response = _sut.GetById(1).Result;
-
+            // ACT            
 
             // ASSERT
-
-            // check the returned status code from the api
-            //OkObjectResult httpResult = response as OkObjectResult;
-            //Assert.IsNotNull(httpResult);
-            //Assert.AreEqual(StatusCodes.Status200OK, httpResult.StatusCode);
-
-            // check return type            
-            //Booking booking = httpResult.Value as Booking;
-            //Assert.IsNotNull(booking);
-
-            // check the values are returned
-            //Assert.AreEqual(_expected.BookingId, booking.BookingId);
-
-            // check the repository method is called once
-            //_mockBookingRepository.Verify(repo => repo.GetById(1), Times.Once);
         }
 
         [TestMethod]
         public void Delete_Success_ReturnsOk()
         {
+            throw new NotImplementedException();
+
             // ARRANGE
 
-            //// create expected return object
-
-            // setup mocked repo
-            //_mockBookingRepository.Setup(repo => repo.GetById(1)).Returns(_expected);
-
-            // initialise controller using mocked repository
-            //BookingController _sut = new BookingController(_mockBookingRepository.Object, _mockBookingHistoryRepository.Object, _mockAvailableSlotRepository.Object);
-
-            // ACT
-
-            //ActionResult? response = _sut.GetById(1).Result;
-
+            // ACT            
 
             // ASSERT
-
-            // check the returned status code from the api
-            //OkObjectResult httpResult = response as OkObjectResult;
-            //Assert.IsNotNull(httpResult);
-            //Assert.AreEqual(StatusCodes.Status200OK, httpResult.StatusCode);
-
-            // check return type            
-            //Booking booking = httpResult.Value as Booking;
-            //Assert.IsNotNull(booking);
-
-            // check the values are returned
-            //Assert.AreEqual(_expected.BookingId, booking.BookingId);
-
-            // check the repository method is called once
-            //_mockBookingRepository.Verify(repo => repo.GetById(1), Times.Once);
         }
 
         [TestMethod]
         public void Delete_Failure_ReturnsNotFound()
         {
+            throw new NotImplementedException();
+
             // ARRANGE
 
-            //// create expected return object
-
-            // setup mocked repo
-            //_mockBookingRepository.Setup(repo => repo.GetById(1)).Returns(_expected);
-
-            // initialise controller using mocked repository
-            //BookingController _sut = new BookingController(_mockBookingRepository.Object, _mockBookingHistoryRepository.Object, _mockAvailableSlotRepository.Object);
-
-            // ACT
-
-            //ActionResult? response = _sut.GetById(1).Result;
-
+            // ACT            
 
             // ASSERT
-
-            // check the returned status code from the api
-            //OkObjectResult httpResult = response as OkObjectResult;
-            //Assert.IsNotNull(httpResult);
-            //Assert.AreEqual(StatusCodes.Status200OK, httpResult.StatusCode);
-
-            // check return type            
-            //Booking booking = httpResult.Value as Booking;
-            //Assert.IsNotNull(booking);
-
-            // check the values are returned
-            //Assert.AreEqual(_expected.BookingId, booking.BookingId);
-
-            // check the repository method is called once
-            //_mockBookingRepository.Verify(repo => repo.GetById(1), Times.Once);
         }
 
     }
