@@ -14,6 +14,7 @@ namespace NailsByNikki.Test
     [TestClass]
     public class IntegrationTests
     {
+        //TODO: integration test for each type of operation
         [TestMethod]
         public void IntegrationTest()
         {

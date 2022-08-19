@@ -13,13 +13,15 @@ namespace NailsByNikki.Controllers
         IBookingRepository _bookingRepository;
         IBookingHistoryRepository _bookingHistoryRepository;
         IAvailableSlotRepository _availableSlotRepository;
-        public BookingController(IBookingRepository bookingRepository, IBookingHistoryRepository bookingHistoryRepository, IAvailableSlotRepository availableSlotRepository)
+        ICustomerRepository _customerRepository;
+        public BookingController(IBookingRepository bookingRepository, IBookingHistoryRepository bookingHistoryRepository, IAvailableSlotRepository availableSlotRepository, ICustomerRepository customerRepository)
         {
             _bookingRepository = bookingRepository;
             _bookingHistoryRepository = bookingHistoryRepository;
             _availableSlotRepository = availableSlotRepository;
+            _customerRepository = customerRepository;
         }
-        
+
         [HttpGet("GetAll")]
         public ActionResult<IEnumerable<Booking>> GetAll()
         {
@@ -50,7 +52,9 @@ namespace NailsByNikki.Controllers
                 AvailableSlotId = availabilitySlotId
             };
 
-            //TODO: add some validation to check if the availableSlotId and customerId are correct (i.e, availableslot is available)
+            Customer customer = _customerRepository.GetById(customerId);
+
+            //TODO: finish validation to check if the availableSlotId and customerId are correct (i.e, availableslot is available)
             if (newBooking.CustomerId >= 0
                 && newBooking.AvailableSlotId >= 0)
             {
