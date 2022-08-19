@@ -52,16 +52,23 @@ namespace NailsByNikki.Controllers
                 AvailableSlotId = availabilitySlotId
             };
 
+            // checks that the customer and availability slot exist
             Customer customer = _customerRepository.GetById(customerId);
             AvailableSlot availableSlot = _availableSlotRepository.GetById(availabilitySlotId);
 
-            if (customer is not null && availableSlot is not null)
+            // checks if availability slot has already been booked previously
+            Booking? booking = _bookingRepository.GetByAvailableSlotId(availabilitySlotId);
+
+            if (customer is not null 
+                && availableSlot is not null
+                && booking is null)
             { 
+                // creates the booking if customer exists and available slot has not been booked
                 _bookingRepository.Create(newBooking);
                 return CreatedAtAction(nameof(Create), new { id = newBooking.BookingId }, newBooking);
             }
             else
-            {
+            { 
                 return BadRequest();
             }               
         }

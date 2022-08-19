@@ -21,5 +21,8 @@ namespace NailsByNikki.Repositories
 
         BookingAvailabilitySlotDto GetDetailsById(int id);
 
+        Booking? GetByAvailableSlotId(int id);
+
+
     }
 }

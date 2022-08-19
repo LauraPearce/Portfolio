@@ -29,7 +29,14 @@ namespace NailsByNikki.Repositories
                 .SingleOrDefault(p => p.BookingId == id);
         }
 
-       public BookingAvailabilitySlotDto GetDetailsById(int id)
+        public Booking? GetByAvailableSlotId(int id)
+        {
+            return _context.Bookings
+                .AsNoTracking()
+                .SingleOrDefault(p => p.AvailableSlotId == id);
+        }
+
+        public BookingAvailabilitySlotDto GetDetailsById(int id)
        {
             var query = (from b in _context.Bookings.AsNoTracking()
                          join a in _context.AvailableSlots.AsNoTracking() on b.AvailableSlotId equals a.AvailableSlotId
