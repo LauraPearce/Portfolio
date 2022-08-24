@@ -40,12 +40,13 @@ namespace NailsByNikki.Controllers
 
         [HttpPost("Create")]
         public IActionResult Create(BookingHistory newBookingHistory)
-        {      
-            //TODO: validate customerId via customerRepository.GetById method
+        {
+            Customer customer = _customerRepository.GetById(newBookingHistory.CustomerId);
+
             if (newBookingHistory.StartDateTime != DateTime.MinValue
                 && newBookingHistory.EndDateTime != DateTime.MinValue
                 && newBookingHistory.ServicesCarriedOut is not null
-                && newBookingHistory.CustomerId >= 0)
+                && customer is not null)
             {
                 _bookingHistoryRepository.Create(newBookingHistory);
                 return CreatedAtAction(nameof(Create), new { id = newBookingHistory.BookingHistoryId }, newBookingHistory);
