@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 namespace NailsByNikki.Test
 {
     [TestClass]
+
+    //TODO: complete test methods
     public class BookingControllerUnitTests
     {
 
@@ -19,6 +21,7 @@ namespace NailsByNikki.Test
         private Mock<IBookingRepository> _mockBookingRepository;
         private Mock<IBookingHistoryRepository> _mockBookingHistoryRepository;
         private Mock<IAvailableSlotRepository> _mockAvailableSlotRepository;
+        private Mock<ICustomerRepository> _mockCustomerRepository;
         
         [TestInitialize]
         public void Initialise()
@@ -27,6 +30,7 @@ namespace NailsByNikki.Test
             _mockBookingRepository = new Mock<IBookingRepository>();    
             _mockBookingHistoryRepository = new Mock<IBookingHistoryRepository>();
             _mockAvailableSlotRepository = new Mock<IAvailableSlotRepository>();
+            _mockCustomerRepository = new Mock<ICustomerRepository>();
         }
         [TestMethod]
         public void GetAll_Success_ReturnsAllBookings()
@@ -61,7 +65,7 @@ namespace NailsByNikki.Test
             _mockBookingRepository.Setup(repo => repo.GetAll()).Returns(expected);
 
             // initialise controller using mocked repository
-            BookingController _sut = new BookingController(_mockBookingRepository.Object, _mockBookingHistoryRepository.Object, _mockAvailableSlotRepository.Object);
+            BookingController _sut = new BookingController(_mockBookingRepository.Object, _mockBookingHistoryRepository.Object, _mockAvailableSlotRepository.Object, _mockCustomerRepository.Object);
 
             // ACT
 

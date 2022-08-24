@@ -14,7 +14,7 @@ namespace NailsByNikki.Controllers
         {
             _customerRepository = repository;
         }
-        //TODO: add the create customer as an endpoint
+
         [HttpGet("GetAll")]
         public ActionResult<IEnumerable<Customer>> GetAll()
         {

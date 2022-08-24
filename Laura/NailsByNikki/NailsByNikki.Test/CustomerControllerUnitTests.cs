@@ -13,6 +13,8 @@ using System.Threading.Tasks;
 namespace NailsByNikki.Test
 {
     [TestClass]
+
+    //TODO: complete test methods
     public class CustomerControllerUnitTests
     {
         // create mock repository to pass to controller

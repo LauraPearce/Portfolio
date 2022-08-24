@@ -16,7 +16,7 @@ namespace NailsByNikki.Test
     {
         //TODO: integration test for each type of operation
         [TestMethod]
-        public void IntegrationTest()
+        public void CustomerGetById_Succcess_SendsRequestToApiAndReturnsInfoFromDatabase()
         {
             // this is doing a complete system test
             // http call > web api > service > database > gets customer > returns it
@@ -46,5 +46,31 @@ namespace NailsByNikki.Test
             //check the values are returned
             Assert.AreEqual(expected, actual.FirstName);
         }
+
+        [TestMethod]
+        public void CustomerGetAll_Succcess_SendsRequestToApiAndReturnsInfoFromDatabase()
+        {
+            // ARRANGE
+            int expected = 5;
+            WebApplicationFactory<Program> webApplicationFactory = new WebApplicationFactory<Program>();
+            HttpClient client = webApplicationFactory.CreateDefaultClient();
+
+
+
+            // ACT
+            IEnumerable<Customer>? actual = client.GetFromJsonAsync<List<Customer>>("/Customer/GetAll").Result;
+
+
+
+            // ASSERT
+
+            //check return type
+            Assert.IsNotNull(actual);
+
+            //check the values are returned
+            Assert.AreEqual(expected, actual.Count());
+        }
+
+
     }
 }
